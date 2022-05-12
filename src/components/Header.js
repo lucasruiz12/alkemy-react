@@ -8,13 +8,13 @@ function Header() {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <Link to='/' className="nav-link active" aria-current="page" href="#">Home</Link>
+                                    <Link to='/' className="nav-link active" aria-current="page">Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to='/listado' className="nav-link active" aria-current="page" href="#">Listado</Link>
+                                    <Link to='/listado' className="nav-link active" aria-current="page">Listado</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to='/contacto' className="nav-link active" aria-current="page" href="#">Contacto</Link>
+                                    <Link to='/contacto' className="nav-link active" aria-current="page">Contacto</Link>
                                 </li>
                             </ul>
                         </div>
