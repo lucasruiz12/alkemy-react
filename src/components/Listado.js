@@ -41,7 +41,7 @@ function Listado() {
                                 <img src={(url_image + el.poster_path)} className="card-img-top" alt="NOIMG" />
                                     <h5 className="card-title">{el.title}</h5>
                                     <p className="card-text">{el.overview.substring(0,80)}...</p>
-                                    <Link to={'/view_detail:&'+el.id} className="btn btn-primary">Ver detalle</Link>
+                                    <Link to={`/detalle?movieId=${el.id}`} className="btn btn-primary">Ver detalle</Link>
                                 </div>
                             </div>
                         </div>

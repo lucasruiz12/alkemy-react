@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Login() {
 
+    const token = localStorage.getItem('token')
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -55,7 +56,17 @@ function Login() {
 
     }
     return (
-        <>
+        token ?
+            <div>
+                <br />
+                <h2>Ya estás logueado</h2>
+                <br />
+                <button onClick={() => {
+                    localStorage.clear()
+                    navigate('/')
+                    }} className="btn btn-primary">Cerrar sesión</button>
+            </div> :
+            <>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <br />
@@ -69,9 +80,7 @@ function Login() {
                     </div>
                     <button type="submit" className="btn btn-primary">Ingresar</button>
                 </form>
-                <br />
-                <button onClick={() => localStorage.clear()} className="btn btn-primary">BORRAR TOKEN</button>
-        </>
+            </>
     )
 }
 
