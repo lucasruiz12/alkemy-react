@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Login() {
 
-    const token = localStorage.getItem('token')
+    const token = sessionStorage.getItem('token')
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -50,7 +50,7 @@ function Login() {
                 const token = res.data.token;
                 // Uso el Local Storage. 
                 // SetItem recibe nombre de la propiedad y valor
-                localStorage.setItem('token', token);
+                sessionStorage.setItem('token', token);
                 navigate('/listado')
             })
 
@@ -62,7 +62,7 @@ function Login() {
                 <h2>Ya estás logueado</h2>
                 <br />
                 <button onClick={() => {
-                    localStorage.clear()
+                    sessionStorage.clear()
                     navigate('/')
                     }} className="btn btn-primary">Cerrar sesión</button>
             </div> :
