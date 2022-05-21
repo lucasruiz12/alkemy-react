@@ -16,7 +16,7 @@ function Header() {
                                 <Link to='/listado' className="nav-link active" aria-current="page">Listado</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to='/contacto' className="nav-link active" aria-current="page">Contacto</Link>
+                                <Link to='/instrucciones' className="nav-link active" aria-current="page">Instrucciones</Link>
                             </li>
                         </ul>
                     </div>
