@@ -32,27 +32,24 @@ function Login() {
             return;
         }
 
-        if (email !== 'challenge@alkemy.org' || password !== 'react') {
+        if (email !== 'user@movies.com' || password !== 'password') {
             swAlert({
                 title: "Credenciales inválidas",
                 icon: "error",
             });
             return;
+        } else {
+            swAlert({
+                title: "Data enviada!",
+                text: "Click en OK para ingresar",
+                icon: "success",
+            });
+            const token = 'token123123';
+            // Uso el Local Storage. 
+            // SetItem recibe nombre de la propiedad y valor
+            sessionStorage.setItem('token', token);
+            navigate('/listado')
         }
-
-        axios.post('http://challenge-react.alkemy.org', { email, password })
-            .then(res => {
-                swAlert({
-                    title: "Data enviada!",
-                    text: "Click en OK para ingresar",
-                    icon: "success",
-                });
-                const token = res.data.token;
-                // Uso el Local Storage. 
-                // SetItem recibe nombre de la propiedad y valor
-                sessionStorage.setItem('token', token);
-                navigate('/listado')
-            })
 
     }
     return (
