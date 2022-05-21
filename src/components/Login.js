@@ -40,7 +40,7 @@ function Login() {
             return;
         }
 
-        axios.post('http://challenge-react.alkemy.org/', { email, password })
+        axios.post('http://challenge-react.alkemy.org', { email, password })
             .then(res => {
                 swAlert({
                     title: "Data enviada!",
